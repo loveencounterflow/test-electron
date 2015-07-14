@@ -1,0 +1,14 @@
+
+
+<h1>Settings</h1>
+
+<script>
+  var ipc = require( 'ipc' );
+  var button = document.createElement( 'button' );
+  button.textContent = 'close'
+  button.addEventListener( 'click', function(){
+    ipc.send( 'hide', 'settings' );
+  });
+  document[ 'body' ].appendChild( button );
+
+</script>

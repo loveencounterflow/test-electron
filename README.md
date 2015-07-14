@@ -7,4 +7,6 @@
 
 
 # test-electron
-(trying out electron a.k.a. atom-shell)
+Trying out electron a.k.a. atom-shell here. Obviously the above logo is for another project but i like it.
+
+

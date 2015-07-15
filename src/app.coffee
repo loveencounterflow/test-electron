@@ -1,5 +1,12 @@
 
 
+############################################################################################################
+### https://github.com/ddopson/node-segfault-handler ###
+SegfaultHandler = require 'segfault-handler'
+SegfaultHandler.registerHandler()
+# SegfaultHandler.causeSegfault()
+
+
 
 ############################################################################################################
 njs_fs                    = require 'fs'

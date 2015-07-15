@@ -1,11 +1,15 @@
 
 
 ############################################################################################################
-### https://github.com/ddopson/node-segfault-handler ###
-SegfaultHandler = require 'segfault-handler'
-SegfaultHandler.registerHandler()
-# SegfaultHandler.causeSegfault()
-
+try
+  ### https://github.com/ddopson/node-segfault-handler ###
+  SegfaultHandler = require 'segfault-handlerXXXXX'
+  SegfaultHandler.registerHandler()
+  # SegfaultHandler.causeSegfault()
+catch error
+  ### ignore silently if segfault-handler is not installed: ###
+  throw error unless error[ 'message' ] is "Cannot find module 'segfault-handler'"
+############################################################################################################
 
 
 ############################################################################################################
@@ -27,6 +31,7 @@ echo                      = CND.echo.bind CND
 app                       = require 'app'
 BrowserWindow             = require 'browser-window'
 ipc                       = require 'ipc'
+
 
 
 # // CND.dir( app )
@@ -90,14 +95,14 @@ ipc.on 'show', ( event, window_name ) ->
   help "show: #{rpr window_name}"
   unless ( w = windows[ window_name ] )?
     ### makeshift measure until https://github.com/atom/electron/issues/2213 gets resolved ###
-    alert '©2213',  "unknwon window #{rpr window_name}"
-    throw new Error "unknwon window #{rpr window_name}"
+    alert '©2213',  "unknown window #{rpr window_name}"
+    throw new Error "unknown window #{rpr window_name}"
   w.show()
 
 ipc.on 'hide', ( event, window_name ) ->
   help "hide: #{rpr window_name}"
   unless ( w = windows[ window_name ] )?
     ### makeshift measure until https://github.com/atom/electron/issues/2213 gets resolved ###
-    alert '©2213',  "unknwon window #{rpr window_name}"
-    throw new Error "unknwon window #{rpr window_name}"
+    alert '©2213',  "unknown window #{rpr window_name}"
+    throw new Error "unknown window #{rpr window_name}"
   w.hide()

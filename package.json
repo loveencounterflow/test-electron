@@ -19,10 +19,10 @@
     "electron-prebuilt": "^0.29.2",
     "gulp": "^3.9.0",
     "gulp-coffee": "^2.3.1",
-    "gulp-sourcemaps": "^1.5.2",
-    "segfault-handler": "^0.2.4"
+    "gulp-sourcemaps": "^1.5.2"
   },
   "dependencies": {
-    "cnd": "^1.0.4"
+    "cnd": "^1.0.4",
+    "longjohn": "^0.2.7"
   }
 }

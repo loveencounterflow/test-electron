@@ -1,15 +1,19 @@
 
 
-############################################################################################################
-try
-  ### https://github.com/ddopson/node-segfault-handler ###
-  SegfaultHandler = require 'segfault-handlerXXXXX'
-  SegfaultHandler.registerHandler()
-  # SegfaultHandler.causeSegfault()
-catch error
-  ### ignore silently if segfault-handler is not installed: ###
-  throw error unless error[ 'message' ] is "Cannot find module 'segfault-handler'"
-############################################################################################################
+# ############################################################################################################
+# try
+#   ### https://github.com/ddopson/node-segfault-handler ###
+#   SegfaultHandler = require 'segfault-handler'
+#   SegfaultHandler.registerHandler()
+#   # SegfaultHandler.causeSegfault()
+# catch error
+#   ### ignore silently if segfault-handler is not installed: ###
+#   console.log '#######################################'
+#   console.log process.version
+#   console.log error
+#   throw error unless error[ 'message' ] is "Cannot find module 'segfault-handler'"
+# ############################################################################################################
+require 'longjohn'
 
 
 ############################################################################################################
@@ -54,6 +58,8 @@ options =
       width:      400
       height:     400
       show:       no
+
+debug '©tPXPH', options
 
 windows = {}
 

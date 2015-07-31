@@ -1,4 +1,7 @@
 
+
+
+
 # ############################################################################################################
 # try
 #   ### https://github.com/ddopson/node-segfault-handler ###
@@ -36,6 +39,8 @@ BrowserWindow             = require 'browser-window'
 ipc                       = require 'ipc'
 
 
+warn require.resolve('dialog')
+xxx
 
 # // CND.dir( app )
 # // _emit = app.emit
